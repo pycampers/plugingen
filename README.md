@@ -10,7 +10,6 @@ For instance, This is how you would go about creating a plugin for the popular p
 # pip_plugin_tree.py
 import plugingen
 
-
 cli = plugingen.create(
     code="import pipdeptree\npipdeptree.main()", requirements=["pipdeptree"]
 )
@@ -27,7 +26,7 @@ setup(
 
 And that's literally it.
 
-For these 10 LOC, you get a plugin that automatically gets discovered, works across virtualenvs, without any modification to the original package whatsoever.
+For just this, You get a plugin that automatically gets discovered, works across virtualenvs, without any modification to the original package whatsoever.
 
 ```
 $ pip tree -l
