@@ -5,7 +5,7 @@ import sys
 from textwrap import dedent
 from typing import Set, List
 
-__version__ = "0.0.2"
+__version__ = "0.0.3"
 
 CODE_TEMPLATE = dedent(
     """
