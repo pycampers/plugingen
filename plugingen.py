@@ -5,7 +5,7 @@ import sys
 from textwrap import dedent
 from typing import Set, List
 
-__version__ = "0.0.1"
+__version__ = "0.0.2"
 
 CODE_TEMPLATE = dedent(
     """
@@ -69,7 +69,10 @@ def generate_pip_plugin(
             code=plugin_code,
         )
 
-        os.environ = cmd["os.environ"]
-        os.execv(cmd["sys.executable"], [cmd["sys.executable"], "-c", code])
+        os.execve(
+            cmd["sys.executable"],
+            [cmd["sys.executable"], "-c", code],
+            cmd["os.environ"],
+        )
 
     return plugin_cli
