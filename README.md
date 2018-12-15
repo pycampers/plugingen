@@ -1,6 +1,6 @@
 # plugingen
 
-Create `pip` plugins in seconds.
+Create `pip` plugins in seconds. 🗲
 
 ---
 
