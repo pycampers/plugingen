@@ -4,7 +4,7 @@ Create `pip` plugins in seconds.
 
 ---
 
-This is how you would create a plugin for the popular package `pipdeptree`.
+For instance, This is how you would go about creating a plugin for the popular package `pipdeptree`:
 
 ```python
 # pip_plugin_tree.py
