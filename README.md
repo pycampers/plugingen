@@ -11,8 +11,8 @@ For instance, This is how you would go about creating a plugin for the popular p
 import plugingen
 
 
-cli = plugingen.generate_pip_plugin(
-    code="import pipdeptree\npipdeptree.main()", requirements=["pipdeptree"], plugin_name="tree"
+cli = plugingen.create(
+    code="import pipdeptree\npipdeptree.main()", requirements=["pipdeptree"]
 )
 ```
 
