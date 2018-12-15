@@ -28,6 +28,25 @@ And that's literally it.
 
 For just this, You get a plugin that automatically gets discovered, works across virtualenvs, without any modification to the original package whatsoever.
 
+You even get your own little spot at `$ pip --help`:
+
+```
+$ pip --help
+...
+  completion                  A helper command used for command completion.
+  help                        Show help for commands.
+
+3rd Party Commands:
+  tree
+  compile
+  sync
+
+General Options:
+  -h, --help                  Show help.
+  --isolated                  Run pip in an isolated mode, ignoring environment variables and user configuration.
+...
+```
+
 ```
 $ pip tree -l
 Django==2.1.4
