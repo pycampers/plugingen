@@ -16,6 +16,8 @@ CODE_TEMPLATE = dedent(
     """
 )
 
+PIP_PLUGIN_SCRIPT_PREFIX = "pip-plugin-"
+
 
 def get_module_dir(module) -> str:
     """Returns the proper package/module directory for `module`"""
@@ -30,7 +32,8 @@ def get_module_dirs(requirements: List[str]) -> Set[str]:
     return {get_module_dir(i) for i in map(importlib.import_module, requirements)}
 
 
-def crash(plugin_name: str):
+def crash():
+    plugin_name = os.path.basename(sys.argv[0])[len(PIP_PLUGIN_SCRIPT_PREFIX) :]
     exit(
         dedent(
             """\
@@ -52,16 +55,14 @@ def crash(plugin_name: str):
     )
 
 
-def generate_pip_plugin(
-    plugin_code: str, requirements: List[str] = [], plugin_name: str = "<plugin-name>"
-):
+def create(plugin_code: str, requirements: List[str] = []):
     def plugin_cli():
         if len(sys.argv) != 2:
-            crash(plugin_name)
+            crash()
         try:
             cmd = json.loads(sys.argv[1])
         except json.JSONDecodeError:
-            crash(plugin_name)
+            crash()
 
         code = CODE_TEMPLATE.format(
             args=cmd["args"],
