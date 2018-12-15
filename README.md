@@ -27,7 +27,7 @@ setup(
 
 And that's literally it.
 
-For these 10 LOC, you get a plugin that automatically gets discovered, works across virtualenvs, without any modification to the original plugin whatsoever.
+For these 10 LOC, you get a plugin that automatically gets discovered, works across virtualenvs, without any modification to the original package whatsoever.
 
 ```
 $ pip tree -l
@@ -37,3 +37,7 @@ pip==19.0.dev0
 setuptools==40.6.3
 wheel==0.32.3
 ```
+
+---
+
+(This is a prof of concept for a [fork](https://github.com/devxpy/pip) of `pip` that supports plugins.)
