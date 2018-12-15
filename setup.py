@@ -12,8 +12,8 @@ from shutil import rmtree
 from setuptools import find_packages, setup, Command
 
 # Package meta-data.
-NAME = 'plugingen'
-DESCRIPTION = 'A plugin generator for pip.'
+NAME = "plugingen"
+DESCRIPTION = "A plugin generator for pip."
 URL = "https://github.com/pycampers/" + NAME
 EMAIL = "devxpy@gmail.com"
 AUTHOR = "Dev Aggarwal"
@@ -93,6 +93,7 @@ class UploadCommand(Command):
 # Where the magic happens:
 setup(
     name=NAME,
+    version=VERSION,
     description=DESCRIPTION,
     long_description=long_description,
     long_description_content_type="text/markdown",
