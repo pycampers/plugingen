@@ -8,7 +8,6 @@ For instance, This is how you would go about creating a plugin for the popular p
 
 ```python
 # pip_plugin_tree.py
-
 import plugingen
 
 
