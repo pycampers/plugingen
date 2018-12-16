@@ -58,4 +58,4 @@ wheel==0.32.3
 
 ---
 
-(This is a prof of concept for a [fork](https://github.com/devxpy/pip) of `pip` that supports plugins.)
+(This is a prof of concept for a [fork](https://github.com/devxpy/pip) of `pip` that supports plugins. Follow discussion [here](https://github.com/pypa/pip/issues/4551).)
